@@ -1,7 +1,7 @@
 package com.sponsoredAdsProject.entities;
 
 
-import net.minidev.json.annotate.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.HashSet;

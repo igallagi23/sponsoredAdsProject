@@ -9,10 +9,11 @@ import javax.persistence.*;
 public class Seller {
     private @Id @GeneratedValue Long sellerID;
 
-    @OneToMany(mappedBy = "seller")
+
+    @OneToMany(mappedBy = "seller",fetch = FetchType.LAZY)
     private Set<Product> products=new HashSet<>();
 
-    @OneToMany(mappedBy = "seller")
+    @OneToMany(mappedBy = "seller",fetch = FetchType.LAZY)
     private Set<Campaign> campaigns=new HashSet<>();
 
     public Seller() {
